@@ -7,20 +7,32 @@ import Prev from '@mui/icons-material/NavigateBefore';
 
 
 
-const ImageSlider = ({heading}) => {
+const ImageSlider = ({data}) => {
+
+  const navigatePrev = () => {
+      console.log('Prev')
+  }
+
+
+  const navigateNext = () => {
+    console.log('Next')
+  }
+
+
   return (
     <div className={styles.slider_container}>
-        <div className={styles.prev_button}>
-          <IconButton size='large'>
+        <div className={styles.prev_button} >
+          <IconButton size='large' onClick={() => {navigatePrev()}}>
             <Prev/>
           </IconButton>
-          
+
         </div>
         <div className={styles.next_button}>
-          <IconButton size='large'>
+          <IconButton size='large' onClick={() => {navigateNext()}}>
             <Next/>
           </IconButton>
         </div>
+      <div className={styles.slider_second_container}>
         <div className={styles.content_container}>
             <h3 className={styles.sub_content}>
                 Men Collection 2020
@@ -51,9 +63,12 @@ const ImageSlider = ({heading}) => {
               Virtual Try
             </Button>
         </div>
-        <div className={styles.content_container}>
-            
+        <div className={styles.content_container} >
+           {data.map((item) => (
+             <img key={item.id} src={`${item.image}`} alt={`${item.alt}`} />
+           ))}
         </div>
+      </div>
     </div>
   )
 }

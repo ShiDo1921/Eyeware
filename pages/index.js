@@ -2,9 +2,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { headerData, iconsList } from '../constant/header.data'
+import { imageSliderData } from '../constant/slider.data'
 import ImageSlider from '../components/ImageSlider'
-import Stack from '@mui/material/Stack';
-import {SearchButton} from '../components/Buttons'
+
 
 
 const Home = () => {
@@ -46,7 +46,7 @@ const Home = () => {
       </header>
 
       <div className={styles.landing_page}>
-        <ImageSlider />
+        <ImageSlider data={imageSliderData}/>
       </div>
 
       <footer className={styles.footer}>
