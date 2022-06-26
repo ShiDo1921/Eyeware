@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+
+:root {
+  --fontSize: 1.1rem;
+  --fontColor: #f0c7c3;
+  --fontLightColor: #ffffff;
+  --fontDarkColor: #000000;
+
+  --headingFontSize: 2rem;
+  --headingFontWeight: 500;
+  --fontFamily: 'Roboto Serif', serif;
+
+  --maxWidth: 1400px;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html,
+body {
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

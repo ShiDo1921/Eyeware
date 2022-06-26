@@ -1,0 +1,78 @@
+.slider_container {
+    width: 100%;
+    height: 100vh;
+}
+
+.prev_button {
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 300ms;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.next_button {
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    bottom: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 300ms;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.content_container {
+    max-width: var(--maxWidth);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 15rem 0 0 0;
+}
+
+.sub_content {
+    color: var(--fontLightColor);
+    margin: 2rem 0;
+    font-weight: 400;
+}
+
+.heading_content {
+    color: var(--fontLightColor);
+    margin: 4rem 0 2rem 0;
+    font-size: 2.5rem;
+    /* font-weight: 400; */
+}
+
+
+
+
+/* Animation */
+
+.slider_container:hover .prev_button {
+    top: 50%;
+    left: 30px;
+    bottom: 50%;
+
+    opacity: 1;
+}
+
+.slider_container:hover .next_button {
+    top: 50%;
+    right: 30px;
+    bottom: 50%;
+
+    opacity: 1;
+}
